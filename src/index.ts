@@ -30,11 +30,12 @@ const spawnProcess = (file: string) => {
   const choiceString = choiceArray.join(`\n`);
   const questionMessage = "테스트할 메소드의 번호를 선택해 주세요.";
   const answer = await rl.question(`${questionMessage}\n${choiceString}\n`);
+  const splitFileName = choiceArray[Number(answer) - 1].split(" ")[1];
+  console.log(`선택하신 메서드를 실행합니다. [${splitFileName}]`);
 
   match(Number(answer))
     .with(NaN, () => console.log("NaN입니다."))
     .with(P.number, () => {
-      const splitFileName = choiceArray[Number(answer) - 1].split(" ")[1];
       spawnProcess(splitFileName);
     });
 })();
