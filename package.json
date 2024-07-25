@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "tsx ./src/index.ts"
+  },
   "dependencies": {
+    "@types/node": "^20.14.12",
+    "child_process": "^1.0.2",
     "ts-pattern": "^5.2.0"
   }
 }
