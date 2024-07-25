@@ -1,0 +1,9 @@
+{
+  "name": "learn-ts-pattern",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "ts-pattern": "^5.2.0"
+  }
+}
