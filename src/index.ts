@@ -34,7 +34,7 @@ const spawnProcess = (file: string) => {
   console.log(`선택하신 메서드를 실행합니다. [${splitFileName}]`);
 
   match(Number(answer))
-    .with(NaN, () => console.log("NaN입니다."))
+    .with(NaN, () => console.log("숫자를 입력해 주세요."))
     .with(P.number, () => {
       spawnProcess(splitFileName);
     });
