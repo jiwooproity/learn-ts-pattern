@@ -9,7 +9,7 @@ import { match, P } from "ts-pattern";
 
 const readDirs = () => {
   const files = fs.readdirSync(path.resolve(__dirname, "."));
-  const exceptRootFile = files.filter((file) => file !== "index.ts");
+  const exceptRootFile = files.filter((file) => file !== "index.ts" && file.includes("."));
   return exceptRootFile.map((file, idx) => `${idx + 1}: ${file}`);
 };
 
