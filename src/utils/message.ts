@@ -1,5 +1,3 @@
-const message = (message: string) => {
+export const lineMsg = (message: string) => {
   console.log(`--------------- ${message} ---------------`);
 };
-
-export default message;
