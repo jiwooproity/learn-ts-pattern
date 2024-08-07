@@ -7,12 +7,11 @@ class Random {
   public random: number;
 
   constructor(private number: number) {
-    this.number = number;
-    this.random = 0;
+    this.random = Math.floor(Math.random() * number);
   }
 
   get() {
-    return Math.floor(Math.random() * this.number);
+    return this.random;
   }
 }
 
