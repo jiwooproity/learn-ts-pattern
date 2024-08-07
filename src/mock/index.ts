@@ -24,7 +24,7 @@ export const getSometimeError = (): Promise<StatusDataType> => {
   ];
 
   return new Promise((resolve) => {
-    const index = new Random(3).get();
+    const index = new Random(status.length).get();
     resolve(status[index]);
   });
 };
