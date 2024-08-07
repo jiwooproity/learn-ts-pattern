@@ -25,7 +25,7 @@ type ReturnType = {
       status: "Success",
       data: data.token,
     }))
-    .with([{ status: Role.Admin }, { access: false, token: P.string }], ([_, data]) => ({
+    .with([{ status: Role.Admin }, { access: false, token: null }], ([_, data]) => ({
       status: "Failed",
       data: data.token,
     }))
