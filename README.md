@@ -19,7 +19,19 @@ yarn install ts-pattern
 
 ## 라이브러리 사용 시 확인이 필요한 내용
 
-해당 패턴 매칭 라이브러리 ts-pattern 은 tsconfig 설정에 strictMode가 활성화되어 있다는 가정 하에 사용이 가능합니다.
+해당 패턴 매칭 라이브러리 ts-pattern 은 tsconfig 설정에 strict 모드가 활성화되어 있다는 가정 하에 사용이 가능합니다.
+
+```
+{
+  "compilerOptions": {
+    ... something
+    "strict": true,
+    ... something
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*.ts"]
+}
+```
 
 ## 예제
 
