@@ -60,3 +60,32 @@ export const getUserRole = (): Promise<UserInfoStatus> => {
     return resolve(response[index]);
   });
 };
+
+type User = {
+  name: string;
+  age: number;
+};
+
+type Expired = {
+  date: number;
+  status: boolean | null;
+};
+
+interface UserSession {
+  user: User;
+  expired: Expired;
+}
+
+export const tokenExpiredStatus = (): Promise<UserSession> => {
+  const response: UserSession[] = [
+    { user: { name: "mati", age: 11 }, expired: { status: true, date: 0 } },
+    { user: { name: "tobi", age: 18 }, expired: { status: false, date: 2000 } },
+    { user: { name: "robin", age: 18 }, expired: { status: false, date: 3000 } },
+    { user: { name: "dorothy", age: 22 }, expired: { status: null, date: 0 } },
+  ];
+
+  return new Promise((resolve) => {
+    const index = new Random(response.length).get();
+    return resolve(response[index]);
+  });
+};
